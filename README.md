@@ -1,4 +1,4 @@
-# adplayer_flutter_plugin
+# AdPlayer Flutter Plugin
 
 A Flutter plugin for using the native AdPlayer SDK.
 
@@ -21,13 +21,24 @@ void main() async {
 }
 ```
 
+
 ### Display
 
 The player is displayed with the help of `AdPlayerPlacementWidget` widget:
 
 ```dart
-  @override
+@override
 Widget build(BuildContext context) {
   return AdPlayerPlacementWidget(tagId: tagId);
 }
+```
+
+
+## Preloading Video
+
+Video AD can be preloaded with the help of `AdPlayerTag.preloadVideo` method:
+
+```dart
+await AdPlayerTag.preloadVideo(tagId);
+// AD is ready to be displayed
 ```
