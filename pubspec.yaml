@@ -1,0 +1,29 @@
+name: adplayer_flutter_plugin
+description: A Flutter plugin for using the native AdPlayer SDK.
+version: 1.1.0
+repository: "https://github.com/Aniview/ad-player-sdk-flutter"
+homepage: "https://aniviewwiki.atlassian.net/wiki/spaces/HELP/pages/2105573384/InAppSDK"
+
+environment:
+  sdk: '>=2.18.5 <4.0.0'
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+  visibility_detector: ^0.3.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.adservrs.adplayer.flutter
+        pluginClass: AdPlayerPlugin
+      ios:
+        pluginClass: AdPlayerFlutterPlugin
