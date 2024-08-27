@@ -24,8 +24,6 @@ final class AdPlayerMethodHandler {
             handleInitializeSDK(arguments: call.arguments, result: result)
         case "initializePublisher":
             handleInitializePublisher(arguments: call.arguments, result: result)
-        case "reportLayoutChange":  // not needed on iOS
-            result(nil)
         case "getTagWhenReady":
             handleGetTagWhenReady(arguments: call.arguments, result: result)
         default:
