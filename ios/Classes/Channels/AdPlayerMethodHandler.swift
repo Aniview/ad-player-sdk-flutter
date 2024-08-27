@@ -32,7 +32,7 @@ final class AdPlayerMethodHandler {
             #if DEBUG
             fatalError("Not implemented: \(call.method)")
             #else
-            break
+            result(FlutterError.notImplemented(name: call.method))
             #endif
         }
     }
@@ -58,15 +58,7 @@ final class AdPlayerMethodHandler {
             return
         }
 
-        let tagConfig = AdPlayerTagConfiguration(tagId: tagId)
-        let publisher = AdPlayerPublisherConfiguration(
-            publisherId: publisherId,
-            tagConfiguration: tagConfig,
-            nil
-        )
-
-        AdPlayer.initializePublisher(publisher) { [weak self] sdkResult in
-            guard let self = self else { return }
+        AdPlayer.initializePublisher(publisherId: publisherId, tagId: tagId) { sdkResult in
             switch sdkResult {
             case .success:
                 result(tagId)
