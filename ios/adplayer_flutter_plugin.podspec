@@ -15,7 +15,7 @@ A Flutter plugin for using the native AdPlayer SDK.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.dependency 'AdPlayerSDK', '>= 1.9.2'
+  s.dependency 'AdPlayerSDK', '~> 1.12.0'
   s.platform = :ios, '9.0'
 
   # Flutter.framework does not contain a i386 slice.

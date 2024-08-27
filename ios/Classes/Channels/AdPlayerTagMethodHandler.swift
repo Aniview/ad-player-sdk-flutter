@@ -24,7 +24,7 @@ final class AdPlayerTagMethodHandler {
             #if DEBUG
             fatalError("Not implemented: \(call.method)")
             #else
-            break
+            result(FlutterError.notImplemented(name: call.method))
             #endif
         }
     }
@@ -60,6 +60,10 @@ final class AdPlayerTagMethodHandler {
 }
 
 extension FlutterError {
+    static func notImplemented(name: String) -> FlutterError {
+        FlutterError(code: "0", message: "\(name) method is not implemented", details: nil)
+    }
+
     static func missingArguments() -> FlutterError {
         FlutterError(code: "1", message: "Arguments are missing", details: nil)
     }

@@ -25,7 +25,7 @@ final class FLNativeViewFactory: NSObject, FlutterPlatformViewFactory {
         arguments args: Any?
     ) -> FlutterPlatformView {
 
-        return AdPlayerPlacementView(
+        return AdPlayerFlutterPlatformView(
             frame: frame,
             viewIdentifier: viewId,
             arguments: args,
