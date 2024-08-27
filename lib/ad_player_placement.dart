@@ -46,13 +46,9 @@ class _AdPlayerPlacementWidgetState extends State<AdPlayerPlacementWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return VisibilityDetector(
-      key: Key("${widget.tagId}-$placementId"),
-      onVisibilityChanged: (info) => AdPlayer.reportLayoutChange(),
-      child: SizedBox(
-        height: placementHeight,
-        child: buildPlatformWidget(context),
-      ),
+    return SizedBox(
+      height: placementHeight,
+      child: buildPlatformWidget(context),
     );
   }
 

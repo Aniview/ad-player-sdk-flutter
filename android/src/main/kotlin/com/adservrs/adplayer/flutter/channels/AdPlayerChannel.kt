@@ -26,7 +26,6 @@ class AdPlayerChannel(binding: FlutterPlugin.FlutterPluginBinding) : MethodChann
             "getVersion" -> getVersion(result)
             "initialize" -> initialize(call, result)
             "initializePublisher" -> initializePublisher(call, result)
-            "reportLayoutChange" -> reportLayoutChange(result)
             "getTagWhenReady" -> getTagWhenReady(call, result)
             else -> result.notImplemented()
         }
@@ -54,11 +53,6 @@ class AdPlayerChannel(binding: FlutterPlugin.FlutterPluginBinding) : MethodChann
         AdPlayer.initializePublisher(publisherId) {
             addTag(tagId)
         }
-        result.success(true)
-    }
-
-    private fun reportLayoutChange(result: MethodChannel.Result) {
-        AdPlayer.reportLayoutChange()
         result.success(true)
     }
 

@@ -23,10 +23,6 @@ abstract class AdPlayer {
     });
   }
 
-  static Future<void> reportLayoutChange() async {
-    await _channel.invokeMethod("reportLayoutChange");
-  }
-
   static Future<String> getTagWhenReady({required String tagId}) async {
     return await _channel.invokeMethod("getTagWhenReady", {
       "tagId": tagId,
