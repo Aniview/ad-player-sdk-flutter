@@ -1,6 +1,6 @@
 name: adplayer_flutter_plugin
 description: A Flutter plugin for using the native AdPlayer SDK.
-version: 1.1.0
+version: 1.2.0
 repository: "https://github.com/Aniview/ad-player-sdk-flutter"
 homepage: "https://aniviewwiki.atlassian.net/wiki/spaces/HELP/pages/2105573384/InAppSDK"
 
